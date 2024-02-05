@@ -11,6 +11,8 @@
 
     class CloudLinkOmega {
         constructor(runtime, virtualMachine) {
+            console.log(runtime)
+            this.runtime = runtime;
             if (this.runtime._events['QUESTION'] instanceof Array) {
                 for (const value of this.runtime._events['QUESTION']) {
                     const v = hijack(value)
@@ -25,8 +27,6 @@
             if (!virtualMachine)
             throw new Error('lpp cannot get Virtual Machine instance.')
             this.vm = virtualMachine //VM
-            console.log(runtime)
-            this.runtime = runtime;
             this.targets = runtime.targets; // Access variables
             this.uuid = null;
             this.username = null;
