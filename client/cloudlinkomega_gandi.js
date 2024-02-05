@@ -1877,13 +1877,13 @@
             peer.vstream.getTracks().forEach((track) => track.stop());
         }
     };
-
+/*
     console.log(CloudLinkOmega.runtime)
     CloudLinkOmega.runtime.on('BEFORE_EXECUTE', () => {
         CloudLinkOmega.runtime.startHats('cloudlinkomega_on_dchan_message');
         CloudLinkOmega.runtime.startHats('cloudlinkomega_on_channel_networked_list');
     });
-
+*/
     Scratch.extensions.register(new CloudLinkOmega())
     // vm.extensionManager._registerInternalExtension(new CloudLinkOmega(vm));
 })(Scratch);
