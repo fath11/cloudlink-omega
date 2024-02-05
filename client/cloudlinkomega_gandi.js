@@ -11,7 +11,6 @@
 
     class CloudLinkOmega {
         constructor(runtime, virtualMachine) {
-            console.log(runtime)
             this.runtime = runtime;
             if (this.runtime._events['QUESTION'] instanceof Array) {
                 for (const value of this.runtime._events['QUESTION']) {
