@@ -1877,6 +1877,7 @@
         }
     };
 
+    console.log(CloudLinkOmega.runtime)
     CloudLinkOmega.runtime.on('BEFORE_EXECUTE', () => {
         CloudLinkOmega.runtime.startHats('cloudlinkomega_on_dchan_message');
         CloudLinkOmega.runtime.startHats('cloudlinkomega_on_channel_networked_list');
