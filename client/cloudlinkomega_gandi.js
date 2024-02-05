@@ -1856,9 +1856,9 @@
         }
     };
 
-    Scratch.vm.runtime.on('BEFORE_EXECUTE', () => {
-        Scratch.vm.runtime.startHats('cloudlinkomega_on_dchan_message');
-        Scratch.vm.runtime.startHats('cloudlinkomega_on_channel_networked_list');
+    this.runtime.on('BEFORE_EXECUTE', () => {
+        this.runtime.startHats('cloudlinkomega_on_dchan_message');
+        this.runtime.startHats('cloudlinkomega_on_channel_networked_list');
     });
 
     if (Scratch.vm?.runtime) {
