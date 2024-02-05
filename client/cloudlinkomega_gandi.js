@@ -98,6 +98,27 @@
         // Define blocks used in the extension
         getInfo() {
             return {
+                info: {
+                    name: 'cloudlinkomega.name',
+                    description: 'cloudlinkomega.desc',
+                    extensionId: 'cloudlinkomega',
+                    featured: true,
+                    disabled: false,
+                    collaborator: 'CloudLink Ω', 
+                    iconURL: CloudLinkOmega.menuIconURI, // The cover of your extension.
+                    insetIconURL: CloudLinkOmega.blockIconURI, // The icon of your extension (will be displayed on the left side of the blocks).
+                    collaboratorURL: 'https://github.com/MikeDev101/cloudlink-omega', 
+                  },
+                  l10n: {
+                    'zh-cn': {
+                      'cloudlinkomega.name': 'CloudLink Ω', 
+                      'cloudlinkomega.desc': 'Scratch 3\'s most powerful online multiplayer network - CloudLink Omega! CLΩ is a powerful multiplayer engine with a custom-built online network designed for gaming.'
+                    },
+                    en: {
+                      'cloudlinkomega.name': 'CloudLink Ω',
+                      'cloudlinkomega.desc': 'Scratch 3\'s most powerful online multiplayer network - CloudLink Omega! CLΩ is a powerful multiplayer engine with a custom-built online network designed for gaming.'
+                    },
+                  },
                 id: 'cloudlinkomega',
                 name: 'CloudLink Ω',
                 docsURI: 'about:blank', // TODO: docs webpage
@@ -523,7 +544,7 @@
                             },
                         ],
                     },
-                }
+                },
             };
         }
         
@@ -1861,33 +1882,6 @@
         this.runtime.startHats('cloudlinkomega_on_channel_networked_list');
     });
 
-    if (Scratch.vm?.runtime) {
-        Scratch.extensions.register(new CloudLinkOmega(Scratch.vm.runtime)) // It is Turbowarp and we use Scratch.extensions.register().
-      } else {
-        Reflect.set(window, 'tempExt', {
-            Extension: CloudLinkOmega,
-            info: {
-              name: 'cloudlinkomega.name',
-              description: 'cloudlinkomega.desc',
-              extensionId: 'cloudlinkomega',
-              featured: true,
-              disabled: false,
-              collaborator: 'CloudLink Ω', 
-              iconURL: CloudLinkOmega.menuIconURI, // The cover of your extension.
-              insetIconURL: CloudLinkOmega.blockIconURI, // The icon of your extension (will be displayed on the left side of the blocks).
-              collaboratorURL: 'https://github.com/MikeDev101/cloudlink-omega', 
-            },
-            l10n: {
-              'zh-cn': {
-                'cloudlinkomega.name': 'CloudLink Ω', 
-                'cloudlinkomega.desc': 'Scratch 3\'s most powerful online multiplayer network - CloudLink Omega! CLΩ is a powerful multiplayer engine with a custom-built online network designed for gaming.'
-              },
-              en: {
-                'cloudlinkomega.name': 'CloudLink Ω',
-                'cloudlinkomega.desc': 'Scratch 3\'s most powerful online multiplayer network - CloudLink Omega! CLΩ is a powerful multiplayer engine with a custom-built online network designed for gaming.'
-              }
-            }
-          })
-      }
+    Scratch.extensions.register(new CloudLinkOmega(Scratch))
     // vm.extensionManager._registerInternalExtension(new CloudLinkOmega(vm));
 })(Scratch);
