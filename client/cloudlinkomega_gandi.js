@@ -1863,7 +1863,7 @@
     });
 */
     window.tempExt = {
-        extension: CloudLinkOmega,
+        Extension: CloudLinkOmega,
         info: {
             name: 'cloudlinkomega.name',
             description: 'cloudlinkomega.desc',
