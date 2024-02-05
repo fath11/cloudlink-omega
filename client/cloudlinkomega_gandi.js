@@ -1884,6 +1884,6 @@
         CloudLinkOmega.runtime.startHats('cloudlinkomega_on_channel_networked_list');
     });
 */
-    Scratch.extensions.register(new CloudLinkOmega(Scratch))
+    Scratch.extensions.register(new CloudLinkOmega())
     // vm.extensionManager._registerInternalExtension(new CloudLinkOmega(vm));
 })(Scratch);
