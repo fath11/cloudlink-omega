@@ -25,6 +25,8 @@
             if (!virtualMachine)
             throw new Error('lpp cannot get Virtual Machine instance.')
             this.vm = virtualMachine //VM
+            console.log(virtualMachine)
+            console.log(runtime)
             this.runtime = virtualMachine.runtime;
             this.targets = runtime.targets; // Access variables
             this.uuid = null;
